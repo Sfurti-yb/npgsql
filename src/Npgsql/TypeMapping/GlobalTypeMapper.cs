@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Text.Json;
-using Npgsql.Internal;
-using Npgsql.Internal.Postgres;
-using Npgsql.Internal.ResolverFactories;
+using System.Threading;
+using YBNpgsql.Internal;
+using YBNpgsql.Internal.Postgres;
+using YBNpgsql.Internal.ResolverFactories;
 
-namespace Npgsql.TypeMapping;
+namespace YBNpgsql.TypeMapping;
 
 /// <inheritdoc />
 sealed class GlobalTypeMapper : INpgsqlTypeMapper

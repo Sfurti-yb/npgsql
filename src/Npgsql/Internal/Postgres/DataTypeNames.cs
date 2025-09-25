@@ -1,7 +1,7 @@
 using System;
-using static Npgsql.Internal.Postgres.DataTypeName;
+using static YBNpgsql.Internal.Postgres.DataTypeName;
 
-namespace Npgsql.Internal.Postgres;
+namespace YBNpgsql.Internal.Postgres;
 
 /// <summary>
 /// Well-known PostgreSQL data type names.

@@ -7,12 +7,12 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Npgsql.Internal.Converters;
-using NpgsqlTypes;
+using YBNpgsql.Internal.Converters;
+using YBNpgsqlTypes;
 using NUnit.Framework;
-using static Npgsql.Tests.TestUtil;
+using static YBNpgsql.Tests.TestUtil;
 
-namespace Npgsql.Tests.Types;
+namespace YBNpgsql.Tests.Types;
 
 // ReSharper disable BitwiseOperatorOnEnumWithoutFlags
 

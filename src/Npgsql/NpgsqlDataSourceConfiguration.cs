@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Net.Security;
 using System.Threading;
 using System.Threading.Tasks;
-using Npgsql.Internal;
+using YBNpgsql.Internal;
 
-namespace Npgsql;
+namespace YBNpgsql;
 
 sealed record NpgsqlDataSourceConfiguration(string? Name,
     NpgsqlLoggingConfiguration LoggingConfiguration,

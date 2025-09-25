@@ -1,5 +1,5 @@
-﻿using Npgsql.Internal;
-using Npgsql.Util;
+﻿using YBNpgsql.Internal;
+using YBNpgsql.Util;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -8,7 +8,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Transactions;
 
-namespace Npgsql;
+namespace YBNpgsql;
 
 /// <summary>
 /// An <see cref="NpgsqlDataSource" /> which manages connections for multiple hosts, is aware of their states (primary, secondary,
@@ -296,6 +296,12 @@ public sealed class NpgsqlMultiHostDataSource : NpgsqlDataSource
         return null;
     }
 
+    internal override bool NeedsRefresh()
+    {
+        return false;
+    }
+    internal override bool Refresh() => throw new NotImplementedException();
+
     internal override async ValueTask<NpgsqlConnector> Get(
         NpgsqlConnection conn,
         NpgsqlTimeout timeout,
@@ -306,7 +312,7 @@ public sealed class NpgsqlMultiHostDataSource : NpgsqlDataSource
 
         var exceptions = new List<Exception>();
 
-        var poolIndex = conn.Settings.LoadBalanceHosts ? GetRoundRobinIndex() : 0;
+        var poolIndex = conn.Settings.LoadBalanceHosts == LoadBalanceHosts.True ? GetRoundRobinIndex() : 0;
 
         var timeoutPerHost = timeout.IsSet ? timeout.CheckAndGetTimeLeft() : TimeSpan.Zero;
         var preferredType = GetTargetSessionAttributes(conn);

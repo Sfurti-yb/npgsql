@@ -1,4 +1,4 @@
-namespace Npgsql;
+namespace YBNpgsql;
 
 using System;
 using System.Collections.Generic;

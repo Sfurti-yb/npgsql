@@ -1,8 +1,8 @@
 using System;
-using Npgsql.Properties;
+using YBNpgsql.Properties;
 
 // ReSharper disable once CheckNamespace
-namespace Npgsql.Internal.Converters;
+namespace YBNpgsql.Internal.Converters;
 
 sealed class DateOnlyDateConverter(bool dateTimeInfinityConversions) : PgBufferedConverter<DateOnly>
 {

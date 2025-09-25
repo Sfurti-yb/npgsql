@@ -1,15 +1,15 @@
-﻿using Npgsql.Internal;
+﻿using YBNpgsql.Internal;
 using NUnit.Framework;
 using System;
 using System.Data;
 using System.Threading.Tasks;
-using Npgsql.Internal.Converters;
-using Npgsql.Internal.Postgres;
-using Npgsql.TypeMapping;
-using NpgsqlTypes;
-using static Npgsql.Tests.TestUtil;
+using YBNpgsql.Internal.Converters;
+using YBNpgsql.Internal.Postgres;
+using YBNpgsql.TypeMapping;
+using YBNpgsqlTypes;
+using static YBNpgsql.Tests.TestUtil;
 
-namespace Npgsql.Tests;
+namespace YBNpgsql.Tests;
 
 public class TypeMapperTests : TestBase
 {

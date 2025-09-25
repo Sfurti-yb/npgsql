@@ -6,7 +6,7 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Text;
 using Scriban;
 
-namespace Npgsql.SourceGenerators;
+namespace YBNpgsql.SourceGenerators;
 
 [Generator]
 public class NpgsqlConnectionStringBuilderSourceGenerator : IIncrementalGenerator
@@ -24,17 +24,17 @@ public class NpgsqlConnectionStringBuilderSourceGenerator : IIncrementalGenerato
         var compilationProvider = context.CompilationProvider;
         context.RegisterSourceOutput(compilationProvider, (spc, compilation) =>
         {
-            var type = compilation.Assembly.GetTypeByMetadataName("Npgsql.NpgsqlConnectionStringBuilder");
+            var type = compilation.Assembly.GetTypeByMetadataName("YBNpgsql.NpgsqlConnectionStringBuilder");
             if (type is null)
                 return;
 
-            var connectionStringPropertyAttribute = compilation.Assembly.GetTypeByMetadataName("Npgsql.NpgsqlConnectionStringPropertyAttribute");
+            var connectionStringPropertyAttribute = compilation.Assembly.GetTypeByMetadataName("YBNpgsql.NpgsqlConnectionStringPropertyAttribute");
             if (connectionStringPropertyAttribute is null)
             {
                 spc.ReportDiagnostic(Diagnostic.Create(
                     InternalError,
                     location: null,
-                    "Could not find Npgsql.NpgsqlConnectionStringPropertyAttribute"));
+                    "Could not find YBNpgsql.NpgsqlConnectionStringPropertyAttribute"));
                 return;
             }
 

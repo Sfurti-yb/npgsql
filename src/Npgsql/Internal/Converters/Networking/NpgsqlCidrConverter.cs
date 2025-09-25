@@ -1,7 +1,7 @@
-using NpgsqlTypes;
+using YBNpgsqlTypes;
 
 // ReSharper disable once CheckNamespace
-namespace Npgsql.Internal.Converters;
+namespace YBNpgsql.Internal.Converters;
 
 #pragma warning disable CS0618 // NpgsqlCidr is obsolete
 sealed class NpgsqlCidrConverter : PgBufferedConverter<NpgsqlCidr>

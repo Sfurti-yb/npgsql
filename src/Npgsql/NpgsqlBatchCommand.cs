@@ -7,10 +7,10 @@ using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 using Microsoft.Extensions.Logging;
-using Npgsql.BackendMessages;
-using Npgsql.Internal;
+using YBNpgsql.BackendMessages;
+using YBNpgsql.Internal;
 
-namespace Npgsql;
+namespace YBNpgsql;
 
 /// <inheritdoc/>
 public sealed class NpgsqlBatchCommand : DbBatchCommand

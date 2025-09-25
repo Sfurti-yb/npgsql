@@ -4,14 +4,14 @@ using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
-using Npgsql.BackendMessages;
-using Npgsql.Internal;
+using YBNpgsql.BackendMessages;
+using YBNpgsql.Internal;
 using InfiniteTimeout = System.Threading.Timeout;
-using static Npgsql.Util.Statics;
+using static YBNpgsql.Util.Statics;
 
 #pragma warning disable 1591
 
-namespace Npgsql;
+namespace YBNpgsql;
 
 /// <summary>
 /// Provides an API for a raw binary COPY operation, a high-performance data import/export mechanism to

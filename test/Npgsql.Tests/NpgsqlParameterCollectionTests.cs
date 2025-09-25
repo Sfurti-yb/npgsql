@@ -1,4 +1,4 @@
-using NpgsqlTypes;
+using YBNpgsqlTypes;
 using NUnit.Framework;
 using System;
 using System.Data;
@@ -6,7 +6,7 @@ using System.Data.Common;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 
-namespace Npgsql.Tests;
+namespace YBNpgsql.Tests;
 
 [TestFixture(CompatMode.OnePass)]
 #if DEBUG

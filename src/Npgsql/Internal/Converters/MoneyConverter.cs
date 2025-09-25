@@ -1,7 +1,7 @@
 using System;
 using System.Numerics;
 
-namespace Npgsql.Internal.Converters;
+namespace YBNpgsql.Internal.Converters;
 
 sealed class MoneyConverter<T> : PgBufferedConverter<T> where T : INumberBase<T>
 {
