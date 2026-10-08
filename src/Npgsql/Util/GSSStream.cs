@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Npgsql.Util;
+namespace YBNpgsql.Util;
 
 // For more detailed explanation of communication protocol
 // See https://www.postgresql.org/docs/current/protocol-flow.html#PROTOCOL-FLOW-GSSAPI

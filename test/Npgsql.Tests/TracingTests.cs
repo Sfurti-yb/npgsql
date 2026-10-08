@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using NpgsqlTypes;
+using YBNpgsqlTypes;
 using NUnit.Framework;
-using static Npgsql.Tests.TestUtil;
+using static YBNpgsql.Tests.TestUtil;
 
-namespace Npgsql.Tests;
+namespace YBNpgsql.Tests;
 
 [NonParallelizable]
 [TestFixture(MultiplexingMode.NonMultiplexing, true)]

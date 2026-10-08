@@ -39,14 +39,14 @@ public class YBPoolingWrapperTests : YBTestUtils
             NpgsqlDataReader reader1 = cmd1.ExecuteReader();
             while (reader1.Read())
             {
-                Assert.AreEqual(reader1.GetString(0), "postgres");
+                Assert.That("postgres", Is.EqualTo(reader1.GetString(0)));
             }
 
             NpgsqlCommand cmd2 = new NpgsqlCommand("SELECT current_user;", conn2);
             NpgsqlDataReader reader2 = cmd2.ExecuteReader();
             while (reader2.Read())
             {
-                Assert.AreEqual(reader2.GetString(0), "tester");
+                Assert.That("tester", Is.EqualTo(reader2.GetString(0)));
             }
 
             Console.WriteLine("Connections Created");
@@ -95,14 +95,14 @@ public class YBPoolingWrapperTests : YBTestUtils
             NpgsqlDataReader reader1 = cmd1.ExecuteReader();
             while (reader1.Read())
             {
-                Assert.AreEqual(reader1.GetString(0), "postgres");
+                Assert.That("postgres", Is.EqualTo(reader1.GetString(0)));
             }
 
             NpgsqlCommand cmd2 = new NpgsqlCommand("SELECT current_user;", conn2);
             NpgsqlDataReader reader2 = cmd2.ExecuteReader();
             while (reader2.Read())
             {
-                Assert.AreEqual(reader2.GetString(0), "tester");
+                Assert.That("tester", Is.EqualTo(reader2.GetString(0)));
             }
 
             Console.WriteLine("Connections Created");
@@ -174,7 +174,7 @@ public class YBPoolingWrapperTests : YBTestUtils
                 NpgsqlDataReader reader1 = cmd1.ExecuteReader();
                 while (reader1.Read())
                 {
-                    Assert.AreEqual("postgres", reader1.GetString(0));
+                    Assert.That(reader1.GetString(0), Is.EqualTo("postgres"));
                 }
             }
 
@@ -184,7 +184,7 @@ public class YBPoolingWrapperTests : YBTestUtils
                 NpgsqlDataReader reader2 = cmd2.ExecuteReader();
                 while (reader2.Read())
                 {
-                    Assert.AreEqual("tester",reader2.GetString(0) );
+                    Assert.That(reader2.GetString(0), Is.EqualTo("tester"));
                 }
             }
 

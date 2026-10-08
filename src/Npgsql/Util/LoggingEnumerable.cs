@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Npgsql.Util;
+namespace YBNpgsql.Util;
 
 // For logging batches we have to use a wrapper for parameters, otherwise they're logged as object[]. See https://github.com/npgsql/npgsql/issues/6078.
 sealed class LoggingEnumerable<T>(IEnumerable<T> wrappedEnumerable) : IEnumerable<T>

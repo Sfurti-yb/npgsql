@@ -690,7 +690,7 @@ CREATE TABLE {table2} (foo INTEGER)");
         Assert.That(pgType, Is.InstanceOf<PostgresDomainType>());
         Assert.That(((PostgresDomainType)pgType).BaseType.Name, Is.EqualTo("character varying"));
         // For domains we should return the underlying type
-        Assert.That(domainSchema.NpgsqlDbType, Is.EqualTo(NpgsqlTypes.NpgsqlDbType.Varchar));
+        Assert.That(domainSchema.NpgsqlDbType, Is.EqualTo(YBNpgsqlTypes.NpgsqlDbType.Varchar));
     }
 
     [Test]

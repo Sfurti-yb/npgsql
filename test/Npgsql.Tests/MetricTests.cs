@@ -7,7 +7,7 @@ using NUnit.Framework;
 using OpenTelemetry;
 using OpenTelemetry.Metrics;
 
-namespace Npgsql.Tests;
+namespace YBNpgsql.Tests;
 
 public class MetricTests : TestBase
 {
@@ -16,7 +16,7 @@ public class MetricTests : TestBase
     {
         var exportedItems = new List<Metric>();
         using var meterProvider = Sdk.CreateMeterProviderBuilder()
-            .AddMeter("Npgsql")
+            .AddMeter("YBNpgsql")
             .AddInMemoryExporter(exportedItems)
             .Build();
 
@@ -55,7 +55,7 @@ public class MetricTests : TestBase
     {
         var exportedItems = new List<Metric>();
         using var meterProvider = Sdk.CreateMeterProviderBuilder()
-            .AddMeter("Npgsql")
+            .AddMeter("YBNpgsql")
             .AddInMemoryExporter(exportedItems)
             .Build();
 
@@ -111,7 +111,7 @@ public class MetricTests : TestBase
     {
         var exportedItems = new List<Metric>();
         using var meterProvider = Sdk.CreateMeterProviderBuilder()
-            .AddMeter("Npgsql")
+            .AddMeter("YBNpgsql")
             .AddInMemoryExporter(exportedItems)
             .Build();
 
@@ -132,7 +132,7 @@ public class MetricTests : TestBase
     {
         var exportedItems = new List<Metric>();
         using var meterProvider = Sdk.CreateMeterProviderBuilder()
-            .AddMeter("Npgsql")
+            .AddMeter("YBNpgsql")
             .AddInMemoryExporter(exportedItems)
             .Build();
 

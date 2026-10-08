@@ -64,7 +64,7 @@ public class YBTestUtils
             var responseBody = await response.Content.ReadAsStringAsync();
             var count = responseBody.Split("client backend");
             Console.WriteLine(server + ":" + (count.Length - 1));
-            Assert.AreEqual(ExpectedCount, count.Length - 1);
+            Assert.That(count.Length - 1, Is.EqualTo(ExpectedCount));
 
             // Verify Local
 
@@ -83,7 +83,7 @@ public class YBTestUtils
 
         var recorded = ClusterAwareDataSource.GetLoad(server);
         Console.WriteLine(server + ":" + recorded);
-        Assert.AreEqual(ExpectedCount, recorded);
+        Assert.That(recorded, Is.EqualTo(ExpectedCount));
 
     }
 }

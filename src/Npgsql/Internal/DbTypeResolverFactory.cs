@@ -1,6 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 
-namespace Npgsql.Internal;
+namespace YBNpgsql.Internal;
 
 [Experimental(NpgsqlDiagnostics.DbTypeResolverExperimental)]
 public abstract class DbTypeResolverFactory

@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using Npgsql.Internal.Postgres;
+using YBNpgsql.Internal.Postgres;
 
-namespace Npgsql.Internal;
+namespace YBNpgsql.Internal;
 
 sealed class ChainDbTypeResolver(IEnumerable<IDbTypeResolver> resolvers) : IDbTypeResolver
 {

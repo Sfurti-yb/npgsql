@@ -163,7 +163,7 @@ public class ClusterAwareDataSource: NpgsqlDataSource
     /// </summary>
     protected readonly ILogger _connectionLogger;
     internal ClusterAwareDataSource(NpgsqlConnectionStringBuilder settings, NpgsqlDataSourceConfiguration dataSourceConfig, bool useClusterAwareDataSource)
-        : base(settings, dataSourceConfig)
+        : base(settings, dataSourceConfig, reportMetrics: true)
     {
         fallbackPrivateIPs = new ConcurrentDictionary<int, Dictionary<string, string>>();
         fallbackPublicIPs = new ConcurrentDictionary<int, Dictionary<string, string>>();

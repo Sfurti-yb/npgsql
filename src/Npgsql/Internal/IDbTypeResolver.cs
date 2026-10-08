@@ -1,9 +1,9 @@
 using System;
 using System.Data;
 using System.Diagnostics.CodeAnalysis;
-using Npgsql.Internal.Postgres;
+using YBNpgsql.Internal.Postgres;
 
-namespace Npgsql.Internal;
+namespace YBNpgsql.Internal;
 
 /// <summary>
 /// An Npgsql resolver for DbType. Used by Npgsql to resolve a DbType to DataTypeName and back.
